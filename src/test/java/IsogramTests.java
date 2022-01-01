@@ -1,17 +1,18 @@
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 public class IsogramTests {
     @Test
     public void FixedTests() {
-        assertEquals(true, Isogram.isIsogram("Dermatoglyphics"));
-        assertEquals(true, Isogram.isIsogram("isogram"));
-        assertEquals(false, Isogram.isIsogram("moose"));
-        assertEquals(false, Isogram.isIsogram("isIsogram"));
-        assertEquals(false, Isogram.isIsogram("aba"));
-        assertEquals(false, Isogram.isIsogram("moOse"));
-        assertEquals(true, Isogram.isIsogram("thumbscrewjapingly"));
-        assertEquals(true, Isogram.isIsogram(""));
+        assertTrue(Isogram.isIsogram("Dermatoglyphics"));
+        assertTrue(Isogram.isIsogram("isogram"));
+        assertFalse(Isogram.isIsogram("moose"));
+        assertFalse(Isogram.isIsogram("isIsogram"));
+        assertFalse(Isogram.isIsogram("aba"));
+        assertFalse(Isogram.isIsogram("moOse"));
+        assertTrue(Isogram.isIsogram("thumbscrewjapingly"));
+        assertTrue(Isogram.isIsogram(""));
     }
 }
